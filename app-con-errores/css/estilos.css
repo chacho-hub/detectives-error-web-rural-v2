@@ -1,0 +1,176 @@
+:root {
+  --verde: #26734d;
+  --verde-claro: #e8f5ee;
+  --amarillo: #ffe08a;
+  --rojo: #b00020;
+  --texto: #1f2933;
+  --fondo: #f7faf7;
+  --borde: #d7e4dc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--texto);
+  backgroud-color: var(--fondo);
+}
+
+.encabezado {
+  padding: 32px 20px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(135deg, #185a37, #2c8c5a);
+}
+
+.encabezado h1 {
+  margin: 8px 0;
+  font-size: 2rem;
+}
+
+.etiqueta {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  font-weight: bold;
+}
+
+.contenedor {
+  widht: min(1100px, 94%);
+  margin: 24px auto;
+  display: grid;
+  /* ERROR INTENCIONAL 8: propiedad CSS mal escrita */
+  grid-template-colums: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.tarjeta {
+  background: white;
+  border: 1px solid var(--borde);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+}
+
+.tarjeta-principal {
+  grid-column: 1 / -1;
+}
+
+.ayuda {
+  color: #52616b;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 70px;
+}
+
+button {
+  margin-top: 8px;
+  border: none;
+  background: var(--verde);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1e5d3e;
+}
+
+.indicadores {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.indicadores article {
+  padding: 12px;
+  border-radius: 14px;
+  background: var(--verde-claro);
+}
+
+.indicadores span {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.indicadores strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 1.35rem;
+}
+
+.resultado {
+  padding: 12px;
+  border-radius: 12px;
+  background: #f1f5f9;
+}
+
+.alerta {
+  background: #fff4d6;
+  border-left: 6px solid #d97706;
+}
+
+.critico {
+  background: #ffe4e6;
+  border-left: 6px solid var(--rojo);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--borde);
+  padding: 8px;
+  text-align: left;
+}
+
+.grafico {
+  display: grid;
+  gap: 8px;
+}
+
+.barra {
+  padding: 8px;
+  border-radius: 10px;
+  background: var(--verde-claro);
+}
+
+.barra span {
+  display: block;
+  height: 16px;
+  border-radius: 999px;
+  background: var(--verde);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #52616b;
+}

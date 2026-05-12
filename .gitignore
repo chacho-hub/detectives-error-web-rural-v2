@@ -1,0 +1,78 @@
+# =========================================================
+# .gitignore - versión para publicar SOLO material del estudiante
+# Proyecto: Detectives del error en una página web rural
+# =========================================================
+
+# ---------------------------------------------------------
+# Material privado del docente / soluciones
+# No subir a GitHub si el repositorio será compartido con estudiantes
+# ---------------------------------------------------------
+docente/
+app-referencia-docente/
+soluciones/
+
+# Archivos de solución o respuesta, por si quedan fuera de esas carpetas
+**/*solucion*
+**/*solución*
+**/*resuelto*
+**/*respuesta*
+**/*answer*
+**/*solution*
+
+# ---------------------------------------------------------
+# Entregas o evidencias diligenciadas por estudiantes
+# Mantener solo plantillas públicas, no respuestas completas
+# ---------------------------------------------------------
+evidencias/entregas/
+evidencias/respuestas/
+evidencias/*_diligenciada*
+evidencias/*_resuelta*
+evidencias/*_completa*
+
+# ---------------------------------------------------------
+# Archivos comprimidos o copias locales
+# ---------------------------------------------------------
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
+*_docente*
+*_privado*
+*_backup*
+*_copia*
+
+# ---------------------------------------------------------
+# Dependencias y salidas generadas
+# ---------------------------------------------------------
+node_modules/
+dist/
+build/
+.cache/
+.tmp/
+tmp/
+coverage/
+
+# ---------------------------------------------------------
+# Configuración local del entorno
+# ---------------------------------------------------------
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+
+# ---------------------------------------------------------
+# Sistema operativo
+# ---------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------------------------------------------------------
+# Logs
+# ---------------------------------------------------------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
