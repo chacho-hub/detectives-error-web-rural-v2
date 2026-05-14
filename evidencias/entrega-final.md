@@ -10,23 +10,23 @@ Fecha: ____________________
 
 Describe brevemente qué hiciste durante la actividad.
 
-Respuesta:
+Respuesta:resolver errores con la guia del profe 
 
 ## 2. Errores principales corregidos
 
 Menciona al menos cinco errores que encontraste y corregiste.
 
-1.
-2.
-3.
-4.
-5.
+1.const form = document.getElementById("form-Registro");
+2.const maizInput = document.getElementById("kilos-maiz");
+3.const resultado = document.getElementById("resultado-resumen");
+4.const tabla = document.getElementById("cuerpo-registros");
+5.<button id="btn-registrar" type="submit">Registrar dato</button>
 
 ## 3. Herramientas usadas
 
 ¿Qué herramientas de diagnóstico usaste?
 
-Respuesta:
+Respuesta:Se utilizo la consola y visual 
 
 ## 4. Resultados de prueba
 

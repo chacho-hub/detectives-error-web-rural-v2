@@ -5,70 +5,126 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AgroSmart - Finca La Esperanza</title>
 
-  
-  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
+
   <header class="encabezado">
     <p class="etiqueta">Vereda El Progreso</p>
-    <h1>AgroSmart: Registro de producción rural<h1>
-    <p>Herramienta para registrar leche, maíz y lluvia en la Finca La Esperanza.</p>
+    <h1>Bienvenido a AgroSmart</h1>
+    <p>
+      Herramienta para registrar leche, maíz y lluvia
+      en la Finca La Esperanza.
+    </p>
   </header>
 
   <main class="contenedor">
+
+    <!-- FORMULARIO -->
     <section class="tarjeta principal">
+
       <h2>Registrar producción diaria</h2>
-      <p class="ayuda">Ingresa los datos de cada día. Luego revisa el resumen y las alertas.</p>
 
-      
-      <form id="form-registro">
+      <p class="ayuda">
+        Ingresa los datos de cada día.
+        Luego revisa el resumen y las alertas.
+      </p>
+
+      <!-- ID CORREGIDO -->
+      <form id="registro-form">
+
         <label for="fecha">Fecha o día</label>
-        <input id="fecha" type="text" placeholder="Ejemplo: Lunes" required>
+        <input
+          id="fecha"
+          type="text"
+          placeholder="Ejemplo: Lunes"
+          required
+        >
 
-        <label for="litros-leche">Litros de leche</label>
-        <input id="litros-leche" type="number" placeholder="Ejemplo: 36" required>
+        <!-- ID CORREGIDO -->
+        <label for="leche-litros">Litros de leche</label>
+        <input
+          id="leche-litros"
+          type="number"
+          placeholder="Ejemplo: 36"
+          required
+        >
 
         <label for="kilos-maiz">Kilos de maíz</label>
-        <input id="kilos-maiz" type="number" placeholder="Ejemplo: 90" required>
+        <input
+          id="kilos-maiz"
+          type="number"
+          placeholder="Ejemplo: 90"
+          required
+        >
 
-        <label for="lluvia-mm">Lluvia en mm</label>
-        <input id="lluvia-mm" type="number" placeholder="Ejemplo: 4" required>
+        <!-- ID CORREGIDO -->
+        <label for="lluvia">Lluvia en mm</label>
+        <input
+          id="lluvia"
+          type="number"
+          placeholder="Ejemplo: 4"
+          required
+        >
 
         <label for="observacion">Observación</label>
-        <textarea id="observacion" placeholder="Ejemplo: día normal, lluvia fuerte, baja producción"></textarea>
 
-        <button id="btn-registrar" type="buttom">Registrar dato</button>
+        <textarea
+          id="observacion"
+          placeholder="Ejemplo: día normal, lluvia fuerte, baja producción"
+        ></textarea>
+
+        <button type="submit">
+          Registrar dato
+        </button>
+
       </form>
+
     </section>
 
+    <!-- RESUMEN -->
     <section class="tarjeta">
+
       <h2>Resumen semanal</h2>
+
       <div class="indicadores">
+
         <article>
           <span>Total leche</span>
           <strong id="total-leche">0 L</strong>
         </article>
+
         <article>
           <span>Promedio leche</span>
           <strong id="promedio-leche">0 L</strong>
         </article>
+
         <article>
           <span>Total maíz</span>
           <strong id="total-maiz">0 kg</strong>
         </article>
+
         <article>
           <span>Promedio maíz</span>
           <strong id="promedio-maiz">0 kg</strong>
         </article>
+
       </div>
 
-      
-      <p id="resultado-resumen" class="resultado">Aún no hay registros.</p>
+      <p id="resultado-resumen" class="resultado">
+        Aún no hay registros.
+      </p>
+
     </section>
 
+    <!-- TABLA -->
     <section class="tarjeta">
+
       <h2>Registros ingresados</h2>
+
       <table>
+
         <thead>
           <tr>
             <th>Día</th>
@@ -78,23 +134,34 @@
             <th>Observación</th>
           </tr>
         </thead>
-        
+
         <tbody id="cuerpo-registros"></tbody>
+
       </table>
+
     </section>
 
+    <!-- GRAFICO -->
     <section class="tarjeta">
+
       <h2>Gráfico rápido</h2>
-      <p>Cuando el sistema funcione, agrega barras para comparar la producción de leche por día.</p>
+
+      <p>
+        Comparación de producción de leche por día.
+      </p>
+
       <div id="grafico-leche" class="grafico"></div>
+
     </section>
+
   </main>
 
   <footer>
     <p>Actividad de depuración inicial - Unidad 2</p>
   </footer>
 
-  
-  <script src="app.js"></script>
+  <!-- SCRIPT -->
+  <script src="js/app.js"></script>
+
 </body>
 </html>

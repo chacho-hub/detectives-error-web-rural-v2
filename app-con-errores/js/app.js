@@ -3,12 +3,12 @@
 
 const registros = [];
 
-const form = document.getElementById("formRegistro");
+const form = document.getElementById("registro-form");
 
 
 const fechaInput = document.getElementById("fecha");
 const lecheInput = document.getElementById("leche-litros");
-const maizInput = document.getElementById("maiz-kilos");
+const maizInput = document.getElementById("kilos-maiz");
 const lluviaInput = document.getElementById("lluvia");
 const observacionInput = document.getElementById("observacion");
 
@@ -17,20 +17,20 @@ const promedioLecheSalida = document.getElementById("promedio-leche");
 const totalMaizSalida = document.getElementById("total-maiz");
 const promedioMaizSalida = document.getElementById("promedio-maiz");
 
-const resultado = document.getElementById("resultadoResumen");
+const resultado = document.getElementById("resultado-resumen");
 
-const tabla = document.getElementById("tabla-registros");
+const tabla = document.getElementById("cuerpo-registros");
 const grafico = document.getElementById("grafico-leche");
 
-form.addEventListener("submit", function (evento) {
+form.addEventListener("submit", (evento) => {
   evento.preventDefault();
 
   const fecha = fechaInput.value;
 
   
-  const leche = lecheInput.value;
-  const maiz = maizInput.value;
-  const lluvia = lluviaInput.value;
+  const leche = Number(lecheInput.value);
+  const maiz = Number(maizInput.value);
+  const lluvia = Number(lluviaInput.value);
   const observacion = observacionInput.value;
 
   if (fecha === "") {
@@ -53,8 +53,11 @@ function actualizarResumen() {
   const totalMaiz = registros.reduce((acumulado, item) => acumulado + item.maiz, 0);
 
   // ERROR INTENCIONAL 16: divide siempre entre 6, pero los registros pueden ser 1, 2, 7, etc.
-  const promedioLeche = totalLeche / 6;
-  const promedioMaiz = totalMaiz / 6;
+  const cantidad = registros.length;
+  const promedioLeche = cantidad > 0 ? totalLeche / cantidad : 0;
+  const promedioMaiz = cantidad > 0 ? totalMaiz / cantidad : 0;
+
+
 
   totalLecheSalida.textContent = totalLeche.toFixed(2) + " L";
   promedioLecheSalida.textContent = promedioLeche.toFixed(2) + " L";
